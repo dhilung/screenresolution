@@ -1,3 +1,6 @@
+Update: A better GUI tool that supports HiDPI resolutions -> https://github.com/avibrazil/RDM
+
+====================
 This is a tool that can be used to determine current resolution,
 list available resolutions and set resolutions for active displays
 on Mac OS 10.6, and possibly above.  I have only tested 10.6.
