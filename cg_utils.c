@@ -64,7 +64,8 @@ unsigned int configureDisplay(CGDirectDisplayID display, struct config *config, 
         pw = CGDisplayModeGetWidth(possibleMode);
         ph = CGDisplayModeGetHeight(possibleMode);
         pd = bitDepth(possibleMode);
-        pr = CGDisplayModeGetRefreshRate(possibleMode);
+        //round refresh rate for comparison. Some monitors (e.g., P2715Q) return values like 2560x1440x32@59.875031.
+        pr = floor(0.5 + CGDisplayModeGetRefreshRate(possibleMode));
         if (pw == config->w &&
             ph == config->h &&
             pd == config->d &&
